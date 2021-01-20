@@ -1,0 +1,73 @@
+
+/* final project
+ * wordy detective game
+ * Yufei Liu
+ * yliu68
+ */
+ 
+ import java.util.Scanner;
+ import java.io.*;
+ public class yliu68_finalproject
+ {
+   public static void main(String [ ] args)throws IOException
+   {
+     letters character = new letters();//call the method "letters" in the main class
+     character.rule1();//use JOption box to tell user rule
+     
+     drawmap drawing=new drawmap();
+     String [][]BWmap=new String[20][20];//my own designed array
+     drawing.worldMap(BWmap);
+     BWmap[1][0]="|+_+ |";
+     BWmap[13][19]="|:-P |";
+     method begin = new method();
+     begin.draw(BWmap);//draw the world map
+     
+     letters printout = new letters();
+     printout.rule2();//use input file to print out rules
+     
+     int steppolice=0;
+     user playgame = new user();//call the user method 
+     playgame.process();
+     
+     
+   } 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

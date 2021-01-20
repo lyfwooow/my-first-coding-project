@@ -1,0 +1,42 @@
+/* method.java
+ Yufei Liu
+ Irene 
+ yliu68
+ Your section 3*/
+import java.util.Random;
+public class method//new class for draw map and random
+{ 
+  public static void draw(String [][]transcript)//reference: lab21
+  {
+    int nr=transcript.length;
+    int nc=transcript[0].length;
+    for (int r=0; r<nr; r++)
+    {
+      for (int c=0; c<nc; c++)
+        System.out.print(transcript[r][c]);
+      System.out.println();
+   }
+  }
+  public static int random1()//(RANDOM)random method for user
+  {
+    int dicenumber=0;
+    Random generator = new Random();
+    dicenumber = generator.nextInt(6)+1;
+    if(dicenumber == 1)
+      System.out.println("Dice throwing. You get 1 step. Run away!");
+    else
+      System.out.println("Dice throwing. You get "+dicenumber+" steps.Run away!");
+    return dicenumber;
+  }
+  public static int random2()//(RANDOM)random method for police
+  {
+    int dicenumber=0;
+    Random generator = new Random();
+    dicenumber = generator.nextInt(6)+1;
+    if(dicenumber == 1)
+      System.out.println("Dice throwing.Attention!Police get 1 step.");
+    else
+      System.out.println("Dice throwing.Attention!Police get "+dicenumber+" steps.");
+    return dicenumber;
+  }
+}
